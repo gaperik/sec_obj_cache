@@ -1,0 +1,57 @@
+No Working Group																		GE
+
+																						December 2014
+
+
+
+				Delivering protected objects
+
+
+Status of document
+
+This document gathers thoughts on requirements from a service provider perspective on delivering protected objects to a client assumed to be implemented in a browser using the Internet.
+
+1. Introduction
+
+The light of revelations of massive, pervasive monitoring and, in parts of the world, increased attention to privacy concerns as well as regulations for handling customers and employees personal data, various forms of means to protect data are applied and new technologies developed.
+
+To further our understanding, this document attempts to explore the requirements on the solution from a service provider perspective as well as drafting potential solutions to the problems that are identified.
+
+
+2. Problem statement
+
+Consider a web service service provider with a client, an origin server	and intermediate, reverse proxies.
+The content ingestion is assumed to happen in the back-end of the origin server. The content delivery process stretches from the origin server via intermediate proxies to the web client. The	web client may be split into a web UI process and a service worker.	
+
+The service provider (SP from now on) have the following set of considerations:
+
+R1) Control of the user experience, to the extent the device and transport capabilities allow for it, meaning 
+    that the actual experience of the user should match the intended experience as is/was assumed in the composition of the Web application.
+
+R2) Parts of the experience may come from content to which Digital Rights are associated, rights need to be 
+    protected.
+
+R3) Fulfilling the commitments to the user as stipulated in the privacy policy.
+
+R4) Compliance to local regulations. 
+
+R5) High quality of experience utilizing the available transport and device capabilities optimally.
+
+R6) Production cost minimized...(certificates, storage, computing, networking, etc.)
+
+The set of considerations hold at least one contradiction, namely the orthogonality between encryption and efficient use of transport resources. If for instance a TLS channel is used for HTTP streams of objects, each stream having different QoE impact, the required transport capabilities are higher than if the individual streams can be given diffrentiated treatment.
+
+One approach used is to have intermediate proxies between the web client and origing server to store - and - forward parts of, or the whole content- used in delivering the user experience.
+
+
+To be continued....
+
+
+
+
+
+3. Drafting the solution
+
+TLS or DTLS Channel security is applied between web client - proxy - origin. In addition
+
+
