@@ -2,7 +2,7 @@ No Working Group
 
 Göran AP Eriksson
 
-December 20th, 2014
+January 12th, 2015
 
 #Content delivery from secure origins and caching of secure objects
 
@@ -21,23 +21,27 @@ Origin
 Representation of the server side functionality of a service provider solution.
 
 Cache proxy  		
-An intermediate node or set of nodes (CDN)providing the possibility to cache content from the origin to be used by the web application.
+An intermediate application level node or set of nodes providing the possibility to cache content from the origin to be used by the web application.
 
 Channel security
+Transport level secure channels between hosts, e.g. using TLS.
 
-Application level security			
+Application level security		
+Security mechanisms applied by web application to secure application data. JOSE is an example.
 
 Secure origin   	
-A secure origing is an origin to which there is a secure communication of data to and from the client. It is secure from an authentication, integrity and confidentiality perspective.
+A secure origin is an origin to which there is a secure communication of data to and from the client. It is secure from an authentication, integrity and confidentiality perspective. The level of security varies depending on mechanisms applied including encryption algorithm, name resolution mechanisms, etc.
 
 Trusted origin		
-A trusted origin is an origin associated to which there is a service provider with whom a user has a trust relationship concerning how the service provider treats the users data or data derived by the service provider concerning about the user. The trust relationship includes the users data- or knowledge obtained by the SP having access to the data- is protected and not redistributed without the consent of the user and/or in accordance with regulations applicable to the users legal home.
+A trusted origin is an origin associated to which there is a service provider with whom a user has a trust relationship concerning how the service provider treats the users data or data derived by the service provider concerning about the user. The trust relationship includes the users data- or knowledge obtained by the SP having access to the data- is protected and not redistributed without the consent of the user and/or in accordance with regulations applicable to the users and/or service providers legal home.
 
 
 
 ##Introduction
 
-In the light of revelations of massive, pervasive monitoring and, in parts of the world, increased attention to privacy concerns as well as regulations for handling customers and employees personal data, various forms of means to protect data transfer from an origin to a client are applied and new technologies developed. The concept of 'secure origin' has been brought up and are worked on in applicable mailling lists such as webappsec, webcrypto, etc..
+...Service Provider security considerations...
+
+Additionally, in the light of revelations of massive, pervasive monitoring and, in parts of the world, increased attention to privacy concerns as well as regulations for handling customers and employees personal data, various forms of means to protect data transfer from an origin to a client are applied and new technologies developed. The concept of 'secure origin' has been brought up and are worked on in applicable mailling lists such as webappsec, webcrypto, etc..
 
 To further our understanding, this document attempts to explore the requirements on the solution from a service provider perspective as well as drafting potential solutions to the problems that are identified covering client, origin and caching proxies.
 
@@ -73,7 +77,7 @@ R7) Production cost minimized...(certificates, storage, computing, networking, e
 
 ###Problem example
 
-Do we need an examples?
+Do we need examples?
 
 
 ##Drafting a solution
