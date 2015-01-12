@@ -22,20 +22,25 @@ Client   			An end user device with a W3C compliant web runtime and a web applic
 
 Origin 				Representation of the server side functionality of a service provider solution.
 
-Cache proxy  		An intermediate node or set of nodes (CDN)providing the possibility to cache content from the 
+Cache proxy  		An intermediate node or set of nodes (CDN) providing the possibility to cache content from the 
 					origin to be used by the web application.
 
-Channel security
+Channel security	Channel refers to a transport "channel", and security refers to the transport being encrypted
+					(using e.g. TLS).
 
-Application level 
-security			
+Application level 	Content (including application logic) is encrypted. The only ones having access to unencrypted
+security			content (of any form) is the Origin and the Client (supplied by the Origin), and in the latter case
+					only for the purpose of rendering of content. Note: enabling the Cache proxy to transcode/adapt
+					content may break this assumption.
 
 Secure origin   	A secure origing is an origin to which there is a secure communication of data to and from 
 					the client. It is secure from an authentication, integrity and confidentiality perspective.
+					(Note that this definition is different from the one adopted by the webappsec WG in
+					https://w3c.github.io/webappsec/specs/mixedcontent/#terms)
 
 Trusted origin		A trusted origin is an origin associated to which there is a service provider with whom a user 
-					has a trust relationship. The trust relationship includes the users data- or knowledge obtained 
-					by the SP having access to the data- is protected and not redistributed without the consent of 
+					has a trust relationship. The trust relationship includes the users data - or knowledge obtained 
+					by the SP having access to the data - is protected and not redistributed without the consent of 
 					the user and/or in accordance with regulations applicable to the users(!) locality.
 
 
@@ -46,7 +51,7 @@ In the light of revelations of massive, pervasive monitoring and, in parts of th
 to privacy concerns as well as regulations for handling customers and employees personal data, various forms of 
 means to protect data transfer from an origin to a client are applied and new technologies developed. The 
 concept of 'secure origin' has been brought up and are worked on in applicable mailling lists such 
-as webappsec, etc..
+as webappsec, etc.
 
 To further our understanding, this document attempts to explore the requirements on the solution from a 
 service provider perspective as well as drafting potential solutions to the problems that are identified 
@@ -128,7 +133,7 @@ And combinations of the above.
 To further clarify the need of application level security, consider the case where HTTPS only is used and a 3rd 
 party cache proxy shall be used; This scenario requires the certificate of the HTTPS connection between the 
 client and origin domain to be given to the CDN provider.  But at the same time, the implied expectation in 
-'secure origin' and possibly a lock icon in the UI is that the is a secure connection between client and origin, 
+'secure origin' and possibly a padlock icon in the UI is that the is a secure connection between client and origin, 
 an expectation that is not reflected in the actual situation. One could argue that this indirectly violates the 
 expectations associated with 'TLS', similar to if TLS protocol would be designed to allow intermediate, 
 transparent MITM's.
