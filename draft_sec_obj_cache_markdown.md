@@ -1,8 +1,10 @@
 No Working Group
 
+
 Göran AP Eriksson
 
 Stefan Håkansson
+
 
 January 14th, 2015
 
@@ -138,8 +140,8 @@ Never in the history of the Web platform development have so few had so many to 
 ##About the authors
 
 GE
+
 SH
-...
-...
+
 
 
