@@ -1,6 +1,7 @@
 No Working Group
 
 Göran AP Eriksson
+Stefan Håkansson
 
 January 12th, 2015
 
