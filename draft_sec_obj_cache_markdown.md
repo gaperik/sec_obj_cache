@@ -3,9 +3,11 @@ No Working Group
 Göran AP Eriksson
 Stefan Håkansson
 
-January 12th, 2015
+January 14th, 2015
 
 #Content delivery from secure origins and caching of secure objects
+
+**Note: Half-baked brainstorming coming up- this is far from ready.**
 
 
 Status of document
@@ -60,7 +62,7 @@ In this context, both passive and active caching are considered, active caching 
 
 ###General 
 
-Consider a web service service provider with a client, an origin server and intermediate, reverse proxies (forward proxies not considered a desirable option). The content ingestion is assumed to happen in the back-end servers of the origin server site. The content delivery process stretches from the origin server via intermediate caches proxies to the web client or directly origin- client or a combinatione thereof. 
+Consider a web service service provider with a client, an origin server and intermediate, reverse proxies (forward proxies not considered a desirable option). The content ingestion is assumed to happen in the back-end servers of the origin server site. The content delivery process stretches from the origin server via intermediate caches proxies to the web client or directly origin- client or a combination thereof. 
 
 The service provider (SP from now on) have the following set of considerations:
 
@@ -70,11 +72,11 @@ The service provider (SP from now on) have the following set of considerations:
 
 3. Fulfilling the commitments to the user as stipulated in the privacy policy.
 
-4. Compliance to local regulations. 
+4. Compliance to local regulations (on security and privacy). 
 
 5. Delivering on the promise of a UI 'secure origin'.
 
-6. High quality of experience utilizing the available transport and device capabilities optimally.
+6. Efficient use of transport and device resources.
 
 7. Production cost minimized...(certificates, storage, computing, networking, etc.).
 
@@ -82,6 +84,10 @@ The service provider (SP from now on) have the following set of considerations:
 ###Problem example
 
 Do we need examples?
+
+###Motivations for caching
+
+Do we need to motivate caching for fixed and mobile 'last mile'?
 
 
 ##Drafting a solution
